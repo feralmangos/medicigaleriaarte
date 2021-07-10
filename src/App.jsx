@@ -9,8 +9,7 @@ function App() {
     <div className="App">
       <header>
         <NavBar workInProgress={workInProgress} />
-        <ItemListContainer greetings="Hello Stranger..."/>
-        <ItemListContainer greetings="Welcome to Our Art Gallery"/>
+        <ItemListContainer />
       </header>
     </div>
   );
