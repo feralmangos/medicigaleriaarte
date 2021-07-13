@@ -77,3 +77,15 @@ p{
   font-weight: 400;
   font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif
 }
+
+.Items{
+  width: 20%;
+  margin:20px;
+  border: bisque 2px solid;
+}
+
+.Items img{
+  width: 100%;
+}
+
+
