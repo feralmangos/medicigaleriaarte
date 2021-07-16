@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import Item from './Item';
+import Item from './ItemDetail';
 
 
 const ItemList = () => {
@@ -38,7 +38,7 @@ const ItemList = () => {
     }
     getItems().then(result=>setDisplayItems(result))
     return (
-        <div>{displayItems.map((elem)=><Item item={elem}/>
+        <div >{displayItems.map((elem)=><Item item={elem}/>
         )}</div>
     )
 }

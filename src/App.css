@@ -57,10 +57,9 @@ h1:hover{
 }
 
 .counteiner{
-  width: 20%;
+  
   border: black solid 3px;
   display: flex;
-  flex-direction: column;
   justify-content: center;
   margin: 20px;
   font-weight: 400;

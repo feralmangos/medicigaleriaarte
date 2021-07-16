@@ -1,16 +1,17 @@
 import './App.css';
 import NavBar from './components/Navbar/NavBar.jsx';
-import ItemListContainer from './components/Navbar/NavBar/ItemListContainer';
+import ItemDetailContainer from './components/ItemDetail/Items';
+import React from 'react'
 
 
 function App() {
-  const workInProgress = ()=>alert("Functionality not yet available")
+  const workInProgress = () => alert("Functionality not yet available")
   return (
     <div className="App">
       <header>
         <NavBar workInProgress={workInProgress} />
-        <ItemListContainer />
       </header>
+      <ItemDetailContainer />
     </div>
   );
 }
