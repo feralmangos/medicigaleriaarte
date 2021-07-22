@@ -1,14 +1,17 @@
 import React, { useState, useEffect } from 'react';
-import {useParams} from "react-router-dom";
+import { useParams } from "react-router-dom";
+import Detail from './Detail'
 
 
 
 
-const ItemDetail=()=>{
+const ItemDetail = () => {
     const [displayItem, setDisplayItem] = useState([]);
-    const {id} = useParams();
-    const tempId = id;
-    console.log("this is id" +id)
+    const { id } = useParams();
+    const [counter,setCounter]=useState([]);
+
+
+    
     const item = [
         {
             id: 1,
@@ -16,7 +19,7 @@ const ItemDetail=()=>{
             description: 'very old painting',
             price: '112$',
             pictureUrl: 'https://media.npr.org/assets/news/2010/07/23/ronan_custom-fc9afd0b711c4f73b6379b9847248bff2fbdb837-s200-c85.jpg'
-        },{
+        }, {
             id: 2,
             title: 'le pins',
             description: 'very new painting',
@@ -30,32 +33,26 @@ const ItemDetail=()=>{
             price: 'free',
             pictureUrl: 'https://slackershack.files.wordpress.com/2020/12/mel-g.jpg'
         }
-      
+
     ];
-    const getItem = () => {
-        return new Promise((resolve, reject) => {
-            setTimeout(() => {
-                resolve(item)
-            }, 2000)
+
+    useEffect(() => {
+        console.log("this is the id " + id)
+        const getItem = () => {
+            setDisplayItem(item)
         }
+        setCounter(id);
+        console.log("This is Counter " + counter)
+        
+        getItem()
+    },[ItemDetail])
 
-        )
-    }
-    console.log("this is "+displayItem);
-    useEffect(()=>{
-        console.log("this is item"+item[id-1].id);
-        console.log(item.id);
-        setDisplayItem(item[id-1])},[tempId])
+    return (
 
-return(
-    <div className='Items'>
-        <p>Id: {displayItem.id}</p>
-        <p>Precio: {displayItem.price}</p>
-        <p>Título: {displayItem.title}</p>
-        <p>Description: {displayItem.description}</p>
-        <img src={""+displayItem.pictureUrl +""} alt="" />
-    </div>
-)
+        <div className="counteiner">{displayItem.filter(item => item.id == id).map((elem) => <Detail id={elem.id} item={elem} />
+        
+        )}</div>
+    )
 }
 
 export default ItemDetail;

@@ -11,7 +11,7 @@ const ItemDetailContainer = () => {
             description: 'very old painting',
             price: '112$',
             pictureUrl: 'https://media.npr.org/assets/news/2010/07/23/ronan_custom-fc9afd0b711c4f73b6379b9847248bff2fbdb837-s200-c85.jpg'
-        },{
+        }, {
             id: 2,
             title: 'le pins',
             description: 'very new painting',
@@ -25,9 +25,11 @@ const ItemDetailContainer = () => {
             price: 'free',
             pictureUrl: 'https://slackershack.files.wordpress.com/2020/12/mel-g.jpg'
         }
-      
+
     ];
-    const getItems = () => {
+   
+    useEffect(() =>{
+         const getItems = () => {
         return new Promise((resolve, reject) => {
             setTimeout(() => {
                 resolve(itemsArray)
@@ -36,9 +38,10 @@ const ItemDetailContainer = () => {
 
         )
     }
-    useEffect(()=>getItems().then(result=>setDisplayItems(result)),[ItemDetailContainer])
+
+        getItems().then(result => setDisplayItems(result))}, [ItemDetailContainer])
     return (
-        <div className="counteiner">{displayItems.map((elem)=><Item id={elem.id} item={elem}/>
+        <div className="counteiner">{displayItems.map((elem) => <Item id={elem.id} item={elem} />
         )}</div>
     )
 }

@@ -3,17 +3,20 @@ import CartWidget from "./CartWidget";
 import { Link } from 'react-router-dom';
 
 
-const NavBar = (props) =>{
+const NavBar = (props) => {
     return (
         <nav>
-            <h1>ART GALLERY</h1>
+            <Link to="/">
+                <h1>ART GALLERY</h1>
+            </Link>
+
             <ul onClick={props.workInProgress}>
-                <Link to="/">
-                <li>ShowRoom</li>
-                </Link>         
+                <Link to="/category">
+                    <li>Catálogo</li>
+                </Link>
             </ul>
-            <CartWidget {...props}/>
-            
+            <CartWidget {...props} />
+
         </nav>
     )
 }
