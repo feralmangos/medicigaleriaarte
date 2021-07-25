@@ -10,12 +10,16 @@ const NavBar = (props) => {
                 <h1>ART GALLERY</h1>
             </Link>
 
-            <ul onClick={props.workInProgress}>
+            <ul >
                 <Link to="/category">
                     <li>Catálogo</li>
                 </Link>
             </ul>
-            <CartWidget {...props} />
+            
+            <Link to="/cart">
+                <CartWidget {...props} />
+            </Link>
+
 
         </nav>
     )

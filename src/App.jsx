@@ -4,9 +4,9 @@ import ItemDetailContainer from './components/ItemDetail/Items';
 import React from 'react'
 import ItemDetail from './components/ItemDetail/ItemDetail';
 import { Route, Switch, BrowserRouter } from 'react-router-dom';
+import Cart from './components/Cart';
 
 function App() {
-  const workInProgress = () => alert("Functionality not yet available")
   return (
     <BrowserRouter>
       <div className="App">
@@ -22,6 +22,10 @@ function App() {
           </Route>
           <Route path="/item/:id">
             <ItemDetail />
+          </Route>
+          
+          <Route path="/cart">
+            <Cart/>
           </Route>
 
         </Switch>
