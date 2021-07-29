@@ -11,8 +11,13 @@ const NavBar = (props) => {
             </Link>
 
             <ul >
-                <Link to="/category">
-                    <li>Catálogo</li>
+                <Link to="/famous">
+                    <li>famosos</li>
+                </Link>
+            </ul>
+            <ul >
+                <Link to="/animals">
+                    <li>animales</li>
                 </Link>
             </ul>
             
