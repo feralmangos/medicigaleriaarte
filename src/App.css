@@ -96,7 +96,19 @@ button{
   position: relative;
   font-size: larger;
   margin: 15px;
-  width: 35%;
+  width: 75%;
+}
+
+.detailOfPurchase{
+  display: flex;
+  border:solid gray 2px;
+}
+
+.cart2{
+  position: relative;
+  margin: 0 auto;
+  width: 50%;
+  font-size: 14px;
 }
 
 

@@ -1,14 +1,12 @@
 import React, { useContext,useState,useEffect } from 'react';
-import { Link } from 'react-router-dom';
 import { Context } from '../services/Context';
-import CartItem from './CartItem';
 
 
 
 
 
 
-const Cart = () => {
+const Cart2 = () => {
     const { cart, clearCart,removeFromCart } = useContext(Context)
     const [carrito,setCarrito]= useState([]);
     useEffect(()=>{
@@ -26,27 +24,15 @@ const Cart = () => {
     const TotalQ=()=>{
         return carrito.reduce((acc,prod)=>acc+(prod.item.quantity),0)
     }
-   if (carrito.length){
+   
     return (
-
-        <>{
-        <div>
-        <div className="detailOfPurchase">
-            {carrito.map(elem => <CartItem value={elem.item.id} title={elem.item.title} quantity={elem.item.quantity} price={elem.item.price}/> )}
-        </div>
+        <div className="cart2">
+        
         <p>Total:{TotalCarrito()}$</p>
         <p>Cantidad de Items en Carrito: {TotalQ()}</p>
-        <button onClick={clearCart}> Erase items</button>
-        </div>}
-        </>)
-
-   } else {
-        return(
-            <Link to="/"><h1>Back to buy stuff</h1> </Link>
-        )
-   }
-    
+        
+        </div>)
 }
 
 
-export default Cart;
+export default Cart2;

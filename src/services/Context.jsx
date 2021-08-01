@@ -14,8 +14,12 @@ export const DataProvider = ({ children }) => {
    }
     //const addToCart = receivedItem => setCart([...cart, receivedItem])
 
-   const removeFromCart = (receivedItem) => {
-        let killItem =cart.filter(elem=>elem.item.id!==receivedItem.item.id)
+   const removeFromCart = (id) => {
+      console.log("this is id of item" + id)  
+        let killItem =cart.filter(elem=>{
+            console.log("this is title"+elem.item.id)
+            return elem.item.id!=id})
+        console.log(killItem)
         setCart(killItem)
     }
 
