@@ -1,17 +1,22 @@
+import { arrayTypeAnnotation } from '@babel/types';
 import React, { useState, useEffect } from 'react';
 import { useParams } from "react-router-dom";
 import Detail from './Detail'
-import item from './products';
+
+import { database } from './firebase';
 
 
 
 
 const ItemDetail2 = () => {
+    const item = database.collection("arte");
     const [displayItem, setDisplayItem] = useState([]);
     const { id } = useParams();
     const [counter,setCounter]=useState([]);
 
-
+    const obtenerArte= ()=>{
+        item.get().then((query)=> setDisplayItem(query.docs))
+    }
     
 
 

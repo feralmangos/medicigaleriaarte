@@ -26,7 +26,7 @@ export const DataProvider = ({ children }) => {
     const clearCart =()=>setCart([])
 
     return(
-        <Context.Provider value={{cart,setCart,addToCart,removeFromCart,clearCart}}>
+        <Context.Provider value={{cart,setCart,addToCart,removeFromCart,clearCart,isntInCart}}>
             {children}
         </Context.Provider>
     )
