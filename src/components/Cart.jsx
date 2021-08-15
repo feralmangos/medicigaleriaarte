@@ -31,11 +31,20 @@ const Cart = () => {
 
             //Establezco la referencia a la colección de firebase
             const remoteComments = database.collection("carro");
+            const arte2 = database.collection("arte2").doc(elem.item.id);
+            console.log("this is the prod" + arte2)
+            console.log( arte2.id)
+            const newStock = elem.item.stock- elem.item.quantity;
+           arte2.update({
+                "stock":newStock
+            }).then((()=>{
+                clearCart();
+                return alert("stock Updated")}))
 
-            //Intento añadir el comentario, lo cual me devuelte una promesa
+            
             remoteComments
                 .add(newComment)
-                .then((res) => alert("COMENTARIO AÑADIDO CON ÉXITO"))
+                .then((res) => alert("COMPRA AÑADIDA CON ÉXITO"))
                 .catch((err) => alert("ERROR: ", err))
         })
 

@@ -36,11 +36,11 @@ if (!load){ return (
         <p>Stock: {subs}</p>
         <p>Units: {add}</p>
         <button onClick={() => {
-            if (subs >= 0 & subs < 8) {
+            if (subs >= 0 & subs < item.stock) {
                 addOn(add - 1);
                 setSub(subs + 1)
             } else {
-                alert("Empty Units")
+                alert("Cero Units to buy isn't allowed")
             }
         }}>-</button>
         
