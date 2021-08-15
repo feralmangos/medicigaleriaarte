@@ -18,7 +18,7 @@ export const DataProvider = ({ children }) => {
       console.log("this is id of item" + id)  
         let killItem =cart.filter(elem=>{
             console.log("this is title"+elem.item.id)
-            return elem.item.id!=id})
+            return elem.item.id!==id.toString()})
         console.log(killItem)
         setCart(killItem)
     }

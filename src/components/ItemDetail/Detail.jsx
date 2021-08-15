@@ -1,5 +1,4 @@
 import React,{useContext, useState} from 'react';
-import { Link } from 'react-router-dom';
 import { Context } from '../../services/Context';
 
 
@@ -9,19 +8,19 @@ import { Context } from '../../services/Context';
 
 const Detail = ({ item }) => {
 
-   const {addToCart,removeFromCart,cart}= useContext(Context)  
+   const {addToCart,cart}= useContext(Context)  
    console.log("this is context " ,Context)
    console.log("this is cart", cart)  
    const [add, addOn] = useState(1);
-   const [subs, setSub] = useState(7);
+   const [subs, setSub] = useState(item.stock);
    const [load,setLoad] =useState(false)
 
    const handleAgregar = ()=>{
-       const temp = {"articulo":item.title, "unit":item.units}
             item.quantity=add;
             addToCart({item})
             console.log("this are units",item.units)
             setLoad(!load)
+            
 }
 if (!load){ return (
 

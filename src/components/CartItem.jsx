@@ -3,6 +3,7 @@ import { Context } from '../services/Context';
 
 
 const CartItem = (props) =>{
+    
 
     const {removeFromCart } = useContext(Context)
 
