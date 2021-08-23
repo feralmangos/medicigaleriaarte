@@ -1,6 +1,5 @@
 import React, { useState, useEffect } from 'react';
 import Item from './Item';
-import item from './products';
 import { database } from './firebase';
 
 
@@ -22,11 +21,16 @@ const ItemDetailContainer = () => {
     useEffect(() => {
         getArt();
 
-    }, [ItemDetailContainer])
+    }) 
+
+    if (displayItems.length){
     return (
         <div className="counteiner">{displayItems.map((elem) => <Item id={elem.id} item={elem} />
         )}</div>
-    )
+    )} else{
+        return(
+        <img src="https://img1.picmix.com/output/stamp/normal/8/5/2/9/509258_fb107.gif" alt="loading"/>
+         ) }
 }
 
 export default ItemDetailContainer;

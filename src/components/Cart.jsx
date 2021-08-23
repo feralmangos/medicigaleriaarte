@@ -81,7 +81,7 @@ const Cart = () => {
                         <input type="text" id="nombre" placeholder="Tu nombre:" required />
                         <input type="text" id="tel" placeholder="Tu cel:" required />
 
-                        <input type="text" id="email" placeholder="Tu meil:" required />
+                        <input type="email" id="email" placeholder="Tu email:" required />
 
 
                         <button type="submit">comprar</button>

@@ -7,7 +7,7 @@ import { Context } from '../services/Context';
 
 
 const Cart2 = () => {
-    const { cart, clearCart,removeFromCart } = useContext(Context)
+    const { cart } = useContext(Context)
     const [carrito,setCarrito]= useState([]);
     useEffect(()=>{
 
@@ -17,7 +17,7 @@ const Cart2 = () => {
         setCarrito(cart)
         console.log("this is effect carrito"+carrito)
         carrito.map(elem=>console.log("loop"+elem.item.id))
-    })
+    },[cart, carrito])
     const TotalCarrito=()=>{
         return carrito.reduce((acc,prod)=>acc+(prod.item.price*prod.item.quantity),0)
     }

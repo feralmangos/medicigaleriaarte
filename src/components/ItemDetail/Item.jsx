@@ -5,6 +5,8 @@ import { Link } from 'react-router-dom';
 
 
 const ItemDetail = ({ item }) => {
+
+    if (item){
     return (
         
             <div className='Items'>
@@ -15,7 +17,11 @@ const ItemDetail = ({ item }) => {
                 </Link>
             </div>
         
-    )
+    )}else{
+        return(
+            <img src="https://img1.picmix.com/output/stamp/normal/8/5/2/9/509258_fb107.gif" alt="loading"/>
+        )
+    }
 }
 
 export default ItemDetail;

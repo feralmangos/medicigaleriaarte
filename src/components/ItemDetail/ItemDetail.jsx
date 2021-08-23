@@ -2,7 +2,6 @@ import React, { useState, useEffect } from 'react';
 import { useParams } from "react-router-dom";
 import Detail from './Detail';
 import { database } from './firebase';
-import item from './products';
 
 
 
@@ -35,11 +34,11 @@ const ItemDetail = () => {
         console.log("This is Counter " + counter)
         
         getItem()
-    },[ItemDetail])
+    },[counter,id]);
 
     return (
 
-        <div className="counteiner">{displayItem.filter(item => item.id == (id)).map((elem) => <Detail id={elem.id} item={elem} />
+        <div className="counteiner">{displayItem.filter(item => item.id === (id)).map((elem) => <Detail id={elem.id} item={elem} />
         
         
         )}</div>
