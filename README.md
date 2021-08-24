@@ -6,10 +6,9 @@ The styling was implemented using simple Css.
 
 **You can access a deployed version here**: https://galeriaarte.netlify.app/
 
-https://i.giphy.com/media/IDX73lVpY4UWRtaJ3i/giphy.webp
 
 ![Animation](https://user-images.githubusercontent.com/29410946/130543258-f301ac61-1464-4d5b-a35f-4d4bfb92be6a.gif)
-
+https://i.giphy.com/media/IDX73lVpY4UWRtaJ3i/giphy.webp
 
 ## How to Run the Project in your Computer
 
