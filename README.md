@@ -10,15 +10,15 @@ https://i.giphy.com/media/IDX73lVpY4UWRtaJ3i/giphy.webp
 ![Animation](https://user-images.githubusercontent.com/29410946/130543258-f301ac61-1464-4d5b-a35f-4d4bfb92be6a.gif)
 
 
-## Available Scripts
+## How to Run the Project in your Computer
 
-After cloning the repository(`git clone https://github.com/feralmangos/medicigaleriaarte`) 
+### `git clone https://github.com/feralmangos/medicigaleriaarte` 
 
-In the project directory, you can run:
+This command clones the repository to your computer.
 
 ### `npm init` 
 
-This commands installs the project dependencies.
+Installs the project dependencies.
 
 ### `npm start`
 
