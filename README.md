@@ -3,7 +3,8 @@
 This is the final project from the React's Coderhouse Course 2021.
 Art Galery is an e-commerce web page made with the React library for the Front-End and Firebase for the Back-End.
 The styling was implemented using simple Css.
-You can access a deployed version here: https://galeriaarte.netlify.app/
+
+**You can access a deployed version here**: https://galeriaarte.netlify.app/
 
 https://i.giphy.com/media/IDX73lVpY4UWRtaJ3i/giphy.webp
 
