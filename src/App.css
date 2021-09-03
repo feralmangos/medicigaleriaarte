@@ -105,10 +105,17 @@ button{
 }
 
 .cart2{
-  position: relative;
-  margin: 0 auto;
-  width: 50%;
-  font-size: 14px;
+  right: 0;
+  position: absolute;
+  color:darkmagenta;
+  font-size: 10px;
+  border:blue;
+  border-radius: 50%; 
+  font-weight: 700;
+  text-align: center;
+  background-color: orange;
+  padding-right: 14px;
+  margin-right:5px;
 }
 
 .loading{

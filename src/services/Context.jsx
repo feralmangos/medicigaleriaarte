@@ -7,26 +7,21 @@ export const DataProvider = ({ children }) => {
 
     const isntInCart = (receivedItem) => cart.filter(elem => elem.item.id === receivedItem.item.id).length === 0
 
-   const addToCart = (receivedItem) => {
-       
-
+    const addToCart = (receivedItem) => {
         isntInCart(receivedItem) ? setCart([...cart, receivedItem]) : alert("already in car")
-   }
-    //const addToCart = receivedItem => setCart([...cart, receivedItem])
+    }
 
-   const removeFromCart = (id) => {
-      console.log("this is id of item" + id)  
-        let killItem =cart.filter(elem=>{
-            console.log("this is title"+elem.item.id)
-            return elem.item.id!==id.toString()})
-        console.log(killItem)
+    const removeFromCart = (id) => {
+        let killItem = cart.filter(elem => {
+            return elem.item.id !== id.toString()
+        })
         setCart(killItem)
     }
 
-    const clearCart =()=>setCart([])
+    const clearCart = () => setCart([])
 
-    return(
-        <Context.Provider value={{cart,setCart,addToCart,removeFromCart,clearCart,isntInCart}}>
+    return (
+        <Context.Provider value={{ cart, setCart, addToCart, removeFromCart, clearCart, isntInCart }}>
             {children}
         </Context.Provider>
     )
