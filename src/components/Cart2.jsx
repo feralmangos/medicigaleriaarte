@@ -10,7 +10,7 @@ const Cart2 = () => {
 
     useEffect(() => {
         setCarrito(cart)
-        carrito.map(elem => console.log("loop" + elem.item.id))
+        
     }, [cart, carrito])
 
     const TotalQ = () => {

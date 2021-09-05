@@ -59,7 +59,7 @@ const Cart = () => {
             <>{
                 <div>
                     <div className="detailOfPurchase">
-                        {carrito.map(elem => <CartItem value={elem.item.id} title={elem.item.title} quantity={elem.item.quantity} price={elem.item.price} />)}
+                        {carrito.map(elem => <CartItem key={elem.item.id} value={elem.item.id} title={elem.item.title} quantity={elem.item.quantity} price={elem.item.price} />)}
                     </div>
                     <p>Total:{TotalCarrito()}$</p>
                     <p>Cantidad de Items en Carrito: {TotalQ()}</p>

@@ -8,9 +8,8 @@ import { Context } from '../../services/Context';
 
 const Detail = ({ item }) => {
 
-   const {addToCart,cart}= useContext(Context)  
-   console.log("this is context " ,Context)
-   console.log("this is cart", cart)  
+   const {addToCart}= useContext(Context)  
+ 
    const [add, addOn] = useState(1);
    const [subs, setSub] = useState(item.stock);
    const [load,setLoad] =useState(false)
@@ -18,7 +17,6 @@ const Detail = ({ item }) => {
    const handleAgregar = ()=>{
             item.quantity=add;
             addToCart({item})
-            console.log("this are units",item.units)
             setLoad(!load)
             
 }

@@ -36,7 +36,7 @@ const ItemDetail = () => {
 
     return (
 
-        <div className="counteiner">{displayItem.filter(item => item.id === (id)).map((elem) => <Detail id={elem.id} item={elem} />
+        <div className="counteiner">{displayItem.filter(item => item.id === (id)).map((elem) => <Detail key={elem.id} id={elem.id} item={elem} />
         
         
         )}</div>

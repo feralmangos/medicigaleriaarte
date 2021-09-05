@@ -7,7 +7,6 @@ import { Link } from 'react-router-dom';
 const ItemDetail = ({ item }) => {
 
     if (item){
-        console.log("this is items ", item)
     return (
         
             <div className='Items'>

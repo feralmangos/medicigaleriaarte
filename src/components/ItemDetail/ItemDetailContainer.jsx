@@ -25,7 +25,7 @@ const ItemDetailContainer = () => {
 
     if (displayItems.length){
     return (
-        <div className="counteiner">{displayItems.map((elem) => <Item id={elem.id} item={elem} />
+        <div className="counteiner">{displayItems.map((elem) => <Item key={elem.id} id={elem.id} item={elem} />
         )}</div>
     )} else{
         return(
