@@ -26,12 +26,10 @@ const ItemDetail = () => {
 
 
     useEffect(() => {
-        console.log("this is the id " + id)
         const getItem = () => {
             getArt();
         }
         setCounter(id);
-        console.log("This is Counter " + counter)
         
         getItem()
     },[counter,id]);

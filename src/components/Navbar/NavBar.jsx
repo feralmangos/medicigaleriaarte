@@ -14,12 +14,12 @@ const NavBar = (props) => {
             </Link>
 
             <ul >
-                <Link to="/famous">
+                <Link to="/catalogue/famous">
                     <li>famosos</li>
                 </Link>
             </ul>
             <ul >
-                <Link to="/animals">
+                <Link to="/catalogue/animals">
                     <li>animales</li>
                 </Link>
             </ul>
